@@ -14,8 +14,8 @@ def read_s3_obj(bucket_name, output_file):
     try:
         s3 = boto3.resource(
         's3',region_name='us-west-1', 
-        aws_access_key_id='AKIAIOGKNRP52OMUXPEQ', 
-        aws_secret_access_key='UrhAivsouLHPoDBnhjh01USqYY3ATqqu1Sje9mip'
+        aws_access_key_id='your_id', 
+        aws_secret_access_key='your_secret_key'
         )
         obj = s3.Object(bucket_name, output_file)
         body = obj.get()['Body'].read().decode('utf-8')
